@@ -1,16 +1,13 @@
-
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from app.routes import auth, users, chat
 from app.exceptions import register_exception_handlers
-from app.database import create_db_tables
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await create_db_tables()
     yield
-
 
 app = FastAPI(title="PromptBridge", lifespan=lifespan)
 

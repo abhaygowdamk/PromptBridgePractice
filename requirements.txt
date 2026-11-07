@@ -1,0 +1,11 @@
+
+fastapi[standard]
+sqlalchemy[asyncio]
+aiosqlite
+pwdlib[argon2]
+PyJWT
+python-dotenv
+google-genai
+email-validator
+asyncpg
+alembic
